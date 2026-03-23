@@ -1,72 +1,5 @@
 {
-  "ai": [
-    {
-      "class": "FL_GeminiImageEditor",
-      "file": "FL_GeminiImageEditor.py",
-      "description": null,
-      "category": "ai"
-    },
-    {
-      "class": "FL_GeminiImageGenADV",
-      "file": "FL_GeminiImageGenADV.py",
-      "description": null,
-      "category": "ai"
-    },
-    {
-      "class": "FL_GeminiTextAPI",
-      "file": "FL_GeminiTextAPI.py",
-      "description": null,
-      "category": "ai"
-    },
-    {
-      "class": "FL_GeminiVideoCaptioner",
-      "file": "FL_GeminiVideoCaptioner.py",
-      "description": "Node for captioning videos using Google's Gemini API. Note: All videos (from file or image batch) are converted to WebM format with a size limit of just under 30MB to ensure compatibility with the Gemini API payload limitations. Video quality will be adjusted automatically to meet the size requirement.",
-      "category": "ai"
-    },
-    {
-      "class": "FL_Hedra_API",
-      "file": "FL_Hedra_API.py",
-      "description": null,
-      "category": "ai"
-    },
-    {
-      "class": "FL_HunyuanDelight",
-      "file": "FL_HunyuanDelight.py",
-      "description": null,
-      "category": "ai"
-    },
-    {
-      "class": "FL_PixVerseAPI",
-      "file": "FL_PixVerseAPI.py",
-      "description": "A ComfyUI node for the PixVerse Image-to-Video API. Takes an image and converts it to a video using PixVerse's API. Downloads the video, extracts frames, and returns them as image tensors.",
-      "category": "ai"
-    },
-    {
-      "class": "FL_RunwayAct2",
-      "file": "FL_RunwayAct2.py",
-      "description": null,
-      "category": "ai"
-    },
-    {
-      "class": "FL_RunwayImageAPI",
-      "file": "FL_RunwayImageAPI.py",
-      "description": null,
-      "category": "ai"
-    },
-    {
-      "class": "FL_VertexGemini25FlashImage",
-      "file": "FL_VertexGemini25FlashImage.py",
-      "description": null,
-      "category": "ai"
-    },
-    {
-      "class": "FL_Veo3VideoGen",
-      "file": "FL_VertexVeo3.py",
-      "description": null,
-      "category": "ai"
-    }
-  ],
+  "ai": [],
   "api_tools": [
     {
       "class": "FL_API_Base64_ImageLoader",
@@ -235,14 +168,7 @@
       "category": "captioning"
     }
   ],
-  "discord": [
-    {
-      "class": "FL_SendToDiscordWebhook",
-      "file": "FL_DiscordWebhook.py",
-      "description": null,
-      "category": "discord"
-    }
-  ],
+  "discord": [],
   "experiments": [
     {
       "class": "FL_BatchAlign",
@@ -297,90 +223,9 @@
       "category": "games"
     }
   ],
-  "google_drive": [
-    {
-      "class": "FL_GoogleCloudStorage",
-      "file": "FL_GoogleCloudStorage.py",
-      "description": "A ComfyUI node for uploading images and videos to Google Cloud Storage. Can handle single images, batches of images, and optionally compile batches into videos.",
-      "category": "google_drive"
-    },
-    {
-      "class": "FL_GoogleDriveDownloader",
-      "file": "FL_GoogleDriveDownloader.py",
-      "description": null,
-      "category": "google_drive"
-    },
-    {
-      "class": "FL_GoogleDriveImageDownloader",
-      "file": "FL_GoogleDriveImageDownloader.py",
-      "description": null,
-      "category": "google_drive"
-    }
-  ],
-  "gpt": [
-    {
-      "class": "FL_Dalle3",
-      "file": "FL_Dalle3.py",
-      "description": null,
-      "category": "gpt"
-    },
-    {
-      "class": "FL_GPT_Image1",
-      "file": "FL_GPT_Image1.py",
-      "description": null,
-      "category": "gpt"
-    },
-    {
-      "class": "FL_GPT_Image1_ADV",
-      "file": "FL_GPT_Image1_ADV.py",
-      "description": null,
-      "category": "gpt"
-    },
-    {
-      "class": "FL_GPT_Text",
-      "file": "FL_GPT_Text.py",
-      "description": null,
-      "category": "gpt"
-    },
-    {
-      "class": "FL_GPT_Vision",
-      "file": "FL_GPT_Vision.py",
-      "description": null,
-      "category": "gpt"
-    },
-    {
-      "class": "FL_SimpleGPTVision",
-      "file": "FL_SimpleGPTVision.py",
-      "description": null,
-      "category": "gpt"
-    }
-  ],
-  "hugging_face": [
-    {
-      "class": "FL_HF_Character",
-      "file": "FL_HF_Character.py",
-      "description": null,
-      "category": "hugging_face"
-    },
-    {
-      "class": "FL_HF_UploaderAbsolute",
-      "file": "FL_HF_UploaderAbsolute.py",
-      "description": null,
-      "category": "hugging_face"
-    },
-    {
-      "class": "FL_HFDatasetDownloader",
-      "file": "FL_HFDatasetDownloader.py",
-      "description": null,
-      "category": "hugging_face"
-    },
-    {
-      "class": "FL_HFHubModelUploader",
-      "file": "FL_HFHubModelUploader.py",
-      "description": null,
-      "category": "hugging_face"
-    }
-  ],
+  "google_drive": [],
+  "gpt": [],
+  "hugging_face": [],
   "image": [
     {
       "class": "FL_AnimeLineExtractor",

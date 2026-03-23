@@ -7,7 +7,7 @@ If you enjoy this project, consider supporting me on Patreon!
   </a>
 </p>
 
-Fill-Nodes is a versatile collection of custom nodes for ComfyUI that extends functionality across multiple domains. Features include advanced image processing, visual effects generation, comprehensive file handling (PDF creation/extraction, Google Drive integration), AI model interfaces (GPT, DALL-E, Hugging Face, Runway, Gemini, Fal.ai, and more), utility nodes for workflow enhancement, audio-reactive visual effects, and specialized tools for video processing, captioning, and batch operations. The pack provides both practical workflow solutions and creative tools within a unified node collection.
+Fill-Nodes is a versatile collection of custom nodes for ComfyUI that extends functionality across multiple domains. Features include advanced image processing, visual effects generation, comprehensive file handling, utility nodes for workflow enhancement, audio-reactive visual effects, and specialized tools for video processing, captioning, and batch operations. The pack provides both practical workflow solutions and creative tools within a unified node collection.
 
 ## 🔍 Table of Contents
 
@@ -21,25 +21,20 @@ Fill-Nodes is a versatile collection of custom nodes for ComfyUI that extends fu
         <li><a href="#utility-nodes">🛠️ Utility Nodes</a></li>
         <li><a href="#ksamplers-nodes">🎲 KSamplers Nodes</a></li>
         <li><a href="#pdf-nodes">📄 PDF Nodes</a></li>
-        <li><a href="#gpt-nodes">🤖 GPT Nodes</a></li>
       </ul>
     </td>
     <td valign="top">
       <ul>
-        <li><a href="#ai-nodes">🧠 AI Nodes</a></li>
         <li><a href="#audio-nodes">🔊 Audio Nodes</a></li>
         <li><a href="#experimental-nodes">🧪 Experimental Nodes</a></li>
         <li><a href="#prompting-nodes">💬 Prompting Nodes</a></li>
         <li><a href="#file-operation-nodes">📂 File Operation Nodes</a></li>
-        <li><a href="#google-drive-nodes">☁️ Google Drive Nodes</a></li>
         <li><a href="#api-tool-nodes">🔌 API Tool Nodes</a></li>
       </ul>
     </td>
     <td valign="top">
       <ul>
-        <li><a href="#hugging-face-nodes">🤗 Hugging Face Nodes</a></li>
         <li><a href="#loader-nodes">⏬ Loader Nodes</a></li>
-        <li><a href="#discord-nodes">💬 Discord Nodes</a></li>
         <li><a href="#work-in-progress-nodes">🚧 Work-in-Progress Nodes</a></li>
         <li><a href="#game-nodes">🎮 Game Nodes</a></li>
         <li><a href="#video-nodes">🎬 Video Nodes</a></li>
@@ -234,54 +229,7 @@ Fill-Nodes is a versatile collection of custom nodes for ComfyUI that extends fu
 
 ---
 
-<details>
-<summary><h2 id="-gpt-nodes">🤖 GPT Nodes</h2></summary>
 
-> *Nodes for integrating with GPT and OpenAI models.*
-
-| Node | Description |
-|------|-------------|
-| `FL_Dalle3` | Generates images using OpenAI's DALL-E 3 model with asynchronous batch processing, caching results based on parameters to avoid redundant API calls, and returns image tensors along with revised prompts. Supports auto-save functionality with metadata JSON files and configurable retry logic for API failures. |
-| `FL_GPT_Image1` | Generates or edits images using OpenAI's gpt-image-1 model with support for batch generation, image editing with optional masks, and comprehensive error handling that creates error images with visual text feedback. Implements retry logic, multipart form-data for edits endpoint, and processes both base64 and URL-based image responses. |
-| `FL_GPT_Image1_ADV` | Advanced multi-input variant that generates multiple images concurrently using OpenAI's gpt-image-1 model by processing up to 100 prompts with individual image inputs for editing in parallel using async/await and thread pool execution. Each input slot can have its own prompt and optional image, with all outputs combined into a batched tensor and detailed per-call response logs. |
-| `FL_GPT_Text` | Makes synchronous API calls to OpenAI's GPT models (GPT-4, GPT-3.5-turbo) for text completion with full parameter control including temperature, top_p, and frequency/presence penalties. Optionally saves responses to file and falls back to environment variable for API key if not provided. |
-| `FL_GPT_Vision` | Batch processes images using OpenAI's GPT-4 Vision models to generate captions asynchronously with configurable batch sizes, supporting both input directories and image tensors, and saves captions to text files alongside images. Retrieves API key from environment variable OPENAI_API_KEY. |
-| `FL_SimpleGPTVision` | Sends a single image to OpenAI's GPT-4 Vision API to generate a text caption based on configurable system and user prompts, with built-in rate limiting retry logic using exponential backoff. Returns the generated caption as a string output. |
-
-### 📷 Screenshots & Examples
-
-![🤖 GPT Nodes Example](images/nodes/gpt_nodes.png)
-
-</details>
-
----
-
-<details>
-<summary><h2 id="-ai-nodes">🧠 AI Nodes</h2></summary>
-
-> *Nodes that integrate with various AI models and services.*
-
-| Node | Description |
-|------|-------------|
-| `FL_GeminiImageEditor` | Generates or edits images using Google Gemini 2.5 Flash Image API with support for up to 4 reference images, batch generation with parallel async processing, and optional square padding. Returns list of generated images with detailed API response logs. |
-| `FL_GeminiImageGenADV` | Advanced multi-input image generation using Google Gemini with dynamic input count (1-100), async parallel batch processing, and per-input prompt/image pairs. Returns list of generated images based on variable number of input slots. |
-| `FL_GeminiTextAPI` | Generates text responses using Google Gemini models (2.5/2.0/1.5 variants) with configurable temperature, token limits, and optional system instructions. Returns raw text output without additional formatting. |
-| `FL_GeminiVideoCaptioner` | Generates detailed captions for videos or image sequences using Google Gemini API, with automatic WebM conversion for API compatibility, frame extraction at configurable FPS, and support for audio processing. Returns caption text and sample frame from video. |
-| `FL_Hedra_API` | Generates videos from image, audio file, and text prompt using Hedra API with configurable aspect ratio and resolution, automatic polling for generation completion, and frame extraction from downloaded video. Returns video frames tensor with processing logs. |
-| `FL_HunyuanDelight` | Processes images using Hunyuan3D-2 model via Stable Diffusion InstructPix2Pix pipeline with configurable CFG, steps, and iterative refinement loops. Downloads the model from HuggingFace and applies image-to-image transformations without text prompts. |
-| `FL_PixVerseAPI` | Generates videos from images using PixVerse API with support for standard image-to-video and transition modes, parallel batch processing with configurable seeds, and automatic frame extraction from generated MP4 videos. Returns up to 5 batches of extracted frames as tensors. |
-| `FL_RunwayAct2` | Generates character performance videos using RunwayML Act Two API from input character images/videos and reference videos, with controls for body movement and expression intensity. Returns extracted video frames as tensors. |
-| `FL_RunwayImageAPI` | Generates images using RunwayML Gen4 Image API with support for up to 3 reference images with custom tags, configurable generation parameters, and automatic polling for task completion. Returns generated image tensor and detailed status logs. |
-| `FL_Veo3VideoGen` | Generates videos using Google Vertex AI Veo 3.0 models with service account authentication, optional reference image input, configurable aspect ratio/resolution, and automatic polling with frame extraction. Returns extracted video frames, video path, and processing logs. |
-| `FL_VertexGemini25FlashImage` | Generates images using Google Vertex AI Gemini 2.5 Flash Image model with service account authentication, support for up to 3 reference images, and parallel batch generation. Returns batch tensor of generated images with detailed processing logs. |
-
-### 📷 Screenshots & Examples
-
-![🧠 AI Nodes Example](images/nodes/ai_nodes.png)
-
-</details>
-
----
 
 <details>
 <summary><h2 id="-audio-nodes">🔊 Audio Nodes</h2></summary>
@@ -371,24 +319,6 @@ Fill-Nodes is a versatile collection of custom nodes for ComfyUI that extends fu
 
 ---
 
-<details>
-<summary><h2 id="-google-drive-nodes">☁️ Google Drive Nodes</h2></summary>
-
-> *Nodes for Google Cloud services integration.*
-
-| Node | Description |
-|------|-------------|
-| `FL_GoogleCloudStorage` | Uploads images or compiled videos to Google Cloud Storage buckets using service account credentials. Supports batch image uploads, video compilation with configurable codecs/FPS, public/private access control, and custom metadata attachment. |
-| `FL_GoogleDriveDownloader` | Downloads files from Google Drive using share links, automatically extracts ZIP archives, and manages output in organized directory structures with cleanup of temporary files. |
-| `FL_GoogleDriveImageDownloader` | Downloads images from Google Drive share links with optional local caching system using MD5-hashed index. Converts downloaded images to RGB tensors normalized to [0,1] range with configurable cache behavior. |
-
-### 📷 Screenshots & Examples
-
-![☁️ Google Drive Nodes Example](images/nodes/googledrive_nodes.png)
-
-</details>
-
----
 
 <details>
 <summary><h2 id="-api-tool-nodes">🔌 API Tool Nodes</h2></summary>
@@ -408,25 +338,6 @@ Fill-Nodes is a versatile collection of custom nodes for ComfyUI that extends fu
 
 ---
 
-<details>
-<summary><h2 id="-hugging-face-nodes">🤗 Hugging Face Nodes</h2></summary>
-
-> *Nodes for integrating with Hugging Face.*
-
-| Node | Description |
-|------|-------------|
-| `FL_HFDatasetDownloader` | Downloads Hugging Face repositories (datasets, models, or spaces) using snapshot_download with configurable parallel workers and local directory specification. |
-| `FL_HFHubModelUploader` | Uploads models and assets to Hugging Face Hub with automatic README generation, model card header support, and organized file structure. Handles images, ZIP files, and large model files with threaded progress tracking and retry logic. |
-| `FL_HF_Character` | Uploads character-related assets (LoRA, datasets, captions, CSVs) to Hugging Face Hub using a structured path format (studio/project/character) for organized character library management. |
-| `FL_HF_UploaderAbsolute` | Uploads various file types (LoRA files, ZIP datasets, images, PDFs, CSVs) to Hugging Face repositories at specified paths with progress tracking. Supports repository creation and uses environment variable HUGGINGFACE_API_KEY for authentication. |
-
-### 📷 Screenshots & Examples
-
-![🤗 Hugging Face Nodes Example](images/nodes/huggingface_nodes.png)
-
-</details>
-
----
 
 <details>
 <summary><h2 id="-loader-nodes">⏬ Loader Nodes</h2></summary>
@@ -447,22 +358,6 @@ Fill-Nodes is a versatile collection of custom nodes for ComfyUI that extends fu
 
 ---
 
-<details>
-<summary><h2 id="-discord-nodes">💬 Discord Nodes</h2></summary>
-
-> *Nodes for Discord integration.*
-
-| Node | Description |
-|------|-------------|
-| `FL_SendToDiscordWebhook` | Sends single images or video compilations to Discord via webhooks with configurable bot username, custom messages, user mentions (via Discord user IDs), FPS control for videos, and optional local file retention. |
-
-### 📷 Screenshots & Examples
-
-![💬 Discord Nodes Example](images/nodes/discord_nodes.png)
-
-</details>
-
----
 
 <details>
 <summary><h2 id="-work-in-progress-nodes">🚧 Work-in-Progress Nodes</h2></summary>
