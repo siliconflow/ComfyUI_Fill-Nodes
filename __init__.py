@@ -49,7 +49,6 @@ from .nodes.captioning.FL_ImageCaptionLayoutPDF import FL_ImageCaptionLayoutPDF
 from .nodes.captioning.FL_Image_Caption_Saver import FL_ImageCaptionSaver
 from .nodes.captioning.FL_LoadCSV import FL_LoadCSV
 from .nodes.captioning.FL_MirrorAndAppendCaptions import FL_MirrorAndAppendCaptions
-from .nodes.captioning.FL_OllamaCaptioner import FL_OllamaCaptioner
 from .nodes.captioning.FL_SaveCSV import FL_SaveCSV
 from .nodes.captioning.FL_Video_Caption_Saver import FL_VideoCaptionSaver
 from .nodes.captioning.FL_WordFrequencyGraph import FL_WordFrequencyGraph
@@ -311,7 +310,6 @@ NODE_CLASS_MAPPINGS = {
     "FL_TextToPDF": FL_TextToPDF,
     "FL_PDFEncryptor": FL_PDFEncryptor,
     "FL_SaveAndDisplayImage": FL_SaveAndDisplayImage,
-    "FL_OllamaCaptioner": FL_OllamaCaptioner,
     "FL_ImageAdjuster": FL_ImageAdjuster,
     "FL_CaptionSaver_V2": FL_CaptionSaver_V2,
     "FL_PathTypeChecker": FL_PathTypeChecker,
@@ -489,7 +487,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FL_TextToPDF": "FL Text To PDF",
     "FL_PDFEncryptor": "FL PDF Encryptor",
     "FL_SaveAndDisplayImage": "FL Save And Display Image",
-    "FL_OllamaCaptioner": "FL Ollama Captioner by Cosmic",
     "FL_ImageAdjuster": "FL Image Adjuster",
     "FL_CaptionSaver_V2": "FL Caption Saver V2",
     "FL_PathTypeChecker": "FL Path Type Checker",

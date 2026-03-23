@@ -223,12 +223,6 @@
       "category": "captioning"
     },
     {
-      "class": "FL_OllamaCaptioner",
-      "file": "FL_OllamaCaptioner.py",
-      "description": null,
-      "category": "captioning"
-    },
-    {
       "class": "FL_SaveCSV",
       "file": "FL_SaveCSV.py",
       "description": null,
