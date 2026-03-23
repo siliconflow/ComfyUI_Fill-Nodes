@@ -1,14 +1,4 @@
 # AI NODES
-from .nodes.ai.FL_Fal_Gemini_ImageEdit import FL_Fal_Gemini_ImageEdit
-from .nodes.ai.FL_Fal_Kling_AIAvatar import FL_Fal_Kling_AIAvatar
-from .nodes.ai.FL_Fal_Kontext import FL_Fal_Kontext
-from .nodes.ai.FL_Fal_Pixverse import FL_Fal_Pixverse
-from .nodes.ai.FL_Fal_Pixverse_LipSync import FL_Fal_Pixverse_LipSync
-from .nodes.ai.FL_Fal_Pixverse_Transition import FL_Fal_Pixverse_Transition
-from .nodes.ai.FL_Fal_Seedance_i2v import FL_Fal_Seedance_i2v
-from .nodes.ai.FL_Fal_Seedream_Edit import FL_Fal_Seedream_Edit
-from .nodes.ai.FL_Fal_SeedVR_Upscale import FL_Fal_SeedVR_Upscale
-from .nodes.ai.FL_Fal_Sora import FL_Fal_Sora
 from .nodes.ai.FL_GeminiVideoCaptioner import FL_GeminiVideoCaptioner
 from .nodes.ai.FL_Hedra_API import FL_Hedra_API
 from .nodes.ai.FL_PixVerseAPI import FL_PixVerseAPI
@@ -354,16 +344,6 @@ NODE_CLASS_MAPPINGS = {
     "FL_WF_Agent": FL_WF_Agent,
     "FL_BlackFrameReject": FL_BlackFrameReject,
     "FL_PixVerseAPI": FL_PixVerseAPI,
-    "FL_Fal_Pixverse": FL_Fal_Pixverse,
-    "FL_Fal_Kontext": FL_Fal_Kontext,
-    "FL_Fal_Gemini_ImageEdit": FL_Fal_Gemini_ImageEdit,
-    "FL_Fal_Seedance_i2v": FL_Fal_Seedance_i2v,
-    "FL_Fal_Seedream_Edit": FL_Fal_Seedream_Edit,
-    "FL_Fal_SeedVR_Upscale": FL_Fal_SeedVR_Upscale,
-    "FL_Fal_Pixverse_Transition": FL_Fal_Pixverse_Transition,
-    "FL_Fal_Pixverse_LipSync": FL_Fal_Pixverse_LipSync,
-    "FL_Fal_Kling_AIAvatar": FL_Fal_Kling_AIAvatar,
-    "FL_Fal_Sora": FL_Fal_Sora,
     "FL_PromptBasic": FL_PromptBasic,
     "FL_PromptMulti": FL_PromptMulti,
     "FL_PromptSelectorBasic": FL_PromptSelectorBasic,
@@ -542,16 +522,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FL_WF_Agent": "FL Workflow Agent",
     "FL_BlackFrameReject": "FL Black Frame Reject",
     "FL_PixVerseAPI": "FL PixVerse API",
-    "FL_Fal_Pixverse": "FL Fal Pixverse API",
-    "FL_Fal_Kontext": "FL Fal Kontext API",
-    "FL_Fal_Gemini_ImageEdit": "FL Fal Gemini Image Edit",
-    "FL_Fal_Seedance_i2v": "FL Fal Seedance i2v",
-    "FL_Fal_Seedream_Edit": "FL Fal Seedream Edit",
-    "FL_Fal_SeedVR_Upscale": "FL Fal SeedVR Upscale",
-    "FL_Fal_Pixverse_Transition": "FL Fal Pixverse Transition",
-    "FL_Fal_Pixverse_LipSync": "FL Fal Pixverse LipSync",
-    "FL_Fal_Kling_AIAvatar": "FL Fal Kling AI Avatar",
-    "FL_Fal_Sora": "FL Fal Sora 2",
     "FL_PromptBasic": "FL Prompt Basic",
     "FL_PromptMulti": "FL Prompt Multi",
     "FL_PromptSelectorBasic": "FL Prompt Selector Basic",

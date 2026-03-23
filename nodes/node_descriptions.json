@@ -1,60 +1,6 @@
 {
   "ai": [
     {
-      "class": "FL_Fal_Gemini_ImageEdit",
-      "file": "FL_Fal_Gemini_ImageEdit.py",
-      "description": "A ComfyUI node for the Fal AI Gemini 2.5 Flash Image Edit API. Takes multiple images and a prompt to edit them using Gemini's multimodal capabilities.",
-      "category": "ai"
-    },
-    {
-      "class": "FL_Fal_Kling_AIAvatar",
-      "file": "FL_Fal_Kling_AIAvatar.py",
-      "description": "A ComfyUI node for the Fal AI Kling Video AI Avatar API. Takes an image and audio to generate realistic avatar videos.",
-      "category": "ai"
-    },
-    {
-      "class": "FL_Fal_Kontext",
-      "file": "FL_Fal_Kontext.py",
-      "description": "A ComfyUI node for the Fal AI Flux Pro Kontext API. Takes multiple image/prompt pairs and generates new images using Fal AI's flux-pro/kontext endpoint. Supports async processing for multiple inputs.",
-      "category": "ai"
-    },
-    {
-      "class": "FL_Fal_Pixverse",
-      "file": "FL_Fal_Pixverse.py",
-      "description": "A ComfyUI node for the Fal AI Image-to-Video API. Takes an image and converts it to a video using Fal AI's pixverse/v4/image-to-video endpoint. Downloads the video, extracts frames, and returns them as image tensors.",
-      "category": "ai"
-    },
-    {
-      "class": "FL_Fal_Pixverse_LipSync",
-      "file": "FL_Fal_Pixverse_LipSync.py",
-      "description": "A ComfyUI node for the Fal AI Pixverse LipSync API. Takes a video and audio/text and generates realistic lipsync animations.",
-      "category": "ai"
-    },
-    {
-      "class": "FL_Fal_Pixverse_Transition",
-      "file": "FL_Fal_Pixverse_Transition.py",
-      "description": "A ComfyUI node for the Fal AI Pixverse v5 Transition API. Takes two images and creates a transition video between them using Fal AI's transition endpoint. Downloads the video, extracts frames, and returns them as image tensors.",
-      "category": "ai"
-    },
-    {
-      "class": "FL_Fal_Seedance_i2v",
-      "file": "FL_Fal_Seedance_i2v.py",
-      "description": null,
-      "category": "ai"
-    },
-    {
-      "class": "FL_Fal_Seedream_Edit",
-      "file": "FL_Fal_Seedream_Edit.py",
-      "description": "A ComfyUI node for the Fal AI ByteDance Seedream v4 Edit API. Takes multiple images and a prompt to edit them using Seedream's capabilities.",
-      "category": "ai"
-    },
-    {
-      "class": "FL_Fal_Sora",
-      "file": "FL_Fal_Sora.py",
-      "description": null,
-      "category": "ai"
-    },
-    {
       "class": "FL_GeminiImageEditor",
       "file": "FL_GeminiImageEditor.py",
       "description": null,
