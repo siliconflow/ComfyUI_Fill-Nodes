@@ -161,12 +161,6 @@
       "category": "audio"
     },
     {
-      "class": "FL_Audio_Separation",
-      "file": "FL_Audio_Separation.py",
-      "description": "A ComfyUI node for separating audio into four sources: bass, drums, other, and vocals. Uses the Hybrid Demucs model from torchaudio.",
-      "category": "audio"
-    },
-    {
       "class": "FL_Audio_Shot_Iterator",
       "file": "FL_Audio_Shot_Iterator.py",
       "description": "A ComfyUI node for extracting individual shot data from a music video sequence. Takes sequence JSON and shot index, outputs frame count and shot details.",

@@ -303,7 +303,6 @@ Fill-Nodes is a versatile collection of custom nodes for ComfyUI that extends fu
 | `FL_Audio_Reactive_Scale` | Applies audio-reactive zoom/scale effects to frames based on envelope values, with center-cropping or padding to maintain dimensions and configurable interpolation modes (bilinear, bicubic, nearest). |
 | `FL_Audio_Reactive_Speed` | Time-remaps frames using cumulative speed multipliers derived from audio envelopes, allowing for dynamic speed-up/slow-down effects with frame interpolation and optional envelope inversion. |
 | `FL_Audio_Segment_Extractor` | Extracts audio segments based on pre-analyzed beat positions from the BPM analyzer, supporting drift-free frame alignment by using cumulative time mapping and outputting precise frame counts for video synchronization. |
-| `FL_Audio_Separation` | Separates audio into four stems (bass, drums, other, vocals) using the Hybrid Demucs model from torchaudio, with chunked processing to manage memory usage and configurable overlap/fade parameters. |
 | `FL_Audio_Shot_Iterator` | Extracts individual shot metadata (frame counts, beat ranges, time boundaries) from music video sequence JSON by shot index, designed for iterative processing of video sequences. |
 
 ### 📷 Screenshots & Examples

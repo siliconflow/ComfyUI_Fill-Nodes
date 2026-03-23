@@ -36,7 +36,6 @@ from .nodes.audio.FL_Audio_Reactive_Saturation import FL_Audio_Reactive_Saturati
 from .nodes.audio.FL_Audio_Reactive_Scale import FL_Audio_Reactive_Scale
 from .nodes.audio.FL_Audio_Reactive_Speed import FL_Audio_Reactive_Speed
 from .nodes.audio.FL_Audio_Segment_Extractor import FL_Audio_Segment_Extractor
-from .nodes.audio.FL_Audio_Separation import FL_Audio_Separation
 from .nodes.audio.FL_Audio_Shot_Iterator import FL_Audio_Shot_Iterator
 from .nodes.audio.FL_AudioFrameCalculator import FL_AudioFrameCalculator
 
@@ -390,7 +389,6 @@ NODE_CLASS_MAPPINGS = {
     "FL_Audio_Reactive_Scale": FL_Audio_Reactive_Scale,
     "FL_Audio_Reactive_Speed": FL_Audio_Reactive_Speed,
     "FL_Audio_Segment_Extractor": FL_Audio_Segment_Extractor,
-    "FL_Audio_Separation": FL_Audio_Separation,
     "FL_Audio_Shot_Iterator": FL_Audio_Shot_Iterator,
     "FL_AudioFrameCalculator": FL_AudioFrameCalculator,
     "FL_QwenImageEditStrength": FL_QwenImageEditStrength,
@@ -569,7 +567,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FL_Audio_Reactive_Scale": "FL Audio Reactive Scale",
     "FL_Audio_Reactive_Speed": "FL Audio Reactive Speed",
     "FL_Audio_Segment_Extractor": "FL Audio Segment Extractor",
-    "FL_Audio_Separation": "FL Audio Separation",
     "FL_Audio_Shot_Iterator": "FL Audio Shot Iterator",
     "FL_AudioFrameCalculator": "FL Audio Frame Calculator",
     "FL_QwenImageEditStrength": "FL Qwen Image Edit with Strength",
