@@ -1,5 +1,6 @@
 import os
 import comfy.utils
+import folder_paths
 
 class FL_SaveCSV:
     @classmethod
@@ -19,7 +20,7 @@ class FL_SaveCSV:
 
     def save_csv(self, csv_data, output_directory, filename):
         # Ensure the output directory exists
-        os.makedirs(output_directory, exist_ok=True)
+        output_directory = folder_paths.get_output_directory()
 
         # Construct the full file path
         file_path = os.path.join(output_directory, filename)

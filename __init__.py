@@ -1,33 +1,3 @@
-# AI NODES
-from .nodes.ai.FL_Fal_Gemini_ImageEdit import FL_Fal_Gemini_ImageEdit
-from .nodes.ai.FL_Fal_Kling_AIAvatar import FL_Fal_Kling_AIAvatar
-from .nodes.ai.FL_Fal_Kontext import FL_Fal_Kontext
-from .nodes.ai.FL_Fal_Pixverse import FL_Fal_Pixverse
-from .nodes.ai.FL_Fal_Pixverse_LipSync import FL_Fal_Pixverse_LipSync
-from .nodes.ai.FL_Fal_Pixverse_Transition import FL_Fal_Pixverse_Transition
-from .nodes.ai.FL_Fal_Seedance_i2v import FL_Fal_Seedance_i2v
-from .nodes.ai.FL_Fal_Seedream_Edit import FL_Fal_Seedream_Edit
-from .nodes.ai.FL_Fal_SeedVR_Upscale import FL_Fal_SeedVR_Upscale
-from .nodes.ai.FL_Fal_Sora import FL_Fal_Sora
-from .nodes.ai.FL_GeminiVideoCaptioner import FL_GeminiVideoCaptioner
-from .nodes.ai.FL_Hedra_API import FL_Hedra_API
-from .nodes.ai.FL_PixVerseAPI import FL_PixVerseAPI
-from .nodes.ai.FL_RunwayAct2 import FL_RunwayAct2
-from .nodes.ai.FL_RunwayImageAPI import FL_RunwayImageAPI
-
-# google-genai nodes — wrapped so a websockets version conflict doesn't kill the entire pack
-_GENAI_NODES_AVAILABLE = True
-try:
-    from .nodes.ai.FL_GeminiImageEditor import FL_GeminiImageEditor
-    from .nodes.ai.FL_GeminiImageGenADV import FL_GeminiImageGenADV
-    from .nodes.ai.FL_GeminiTextAPI import FL_GeminiTextAPI
-    from .nodes.ai.FL_VertexGemini25FlashImage import FL_VertexGemini25FlashImage
-    from .nodes.ai.FL_VertexVeo3 import FL_Veo3VideoGen
-except ImportError as e:
-    _GENAI_NODES_AVAILABLE = False
-    print(f"[FL Fill-Nodes] Warning: Could not load Google Gemini/Vertex nodes: {e}")
-    print("[FL Fill-Nodes] Install google-genai with a compatible websockets version to enable these nodes.")
-
 # API_TOOLS NODES
 from .nodes.api_tools.FL_API_Base64_ImageLoader import FL_API_Base64_ImageLoader
 from .nodes.api_tools.FL_API_ImageSaver import FL_API_ImageSaver
@@ -46,7 +16,6 @@ from .nodes.audio.FL_Audio_Reactive_Saturation import FL_Audio_Reactive_Saturati
 from .nodes.audio.FL_Audio_Reactive_Scale import FL_Audio_Reactive_Scale
 from .nodes.audio.FL_Audio_Reactive_Speed import FL_Audio_Reactive_Speed
 from .nodes.audio.FL_Audio_Segment_Extractor import FL_Audio_Segment_Extractor
-from .nodes.audio.FL_Audio_Separation import FL_Audio_Separation
 from .nodes.audio.FL_Audio_Shot_Iterator import FL_Audio_Shot_Iterator
 from .nodes.audio.FL_AudioFrameCalculator import FL_AudioFrameCalculator
 
@@ -59,13 +28,9 @@ from .nodes.captioning.FL_ImageCaptionLayoutPDF import FL_ImageCaptionLayoutPDF
 from .nodes.captioning.FL_Image_Caption_Saver import FL_ImageCaptionSaver
 from .nodes.captioning.FL_LoadCSV import FL_LoadCSV
 from .nodes.captioning.FL_MirrorAndAppendCaptions import FL_MirrorAndAppendCaptions
-from .nodes.captioning.FL_OllamaCaptioner import FL_OllamaCaptioner
 from .nodes.captioning.FL_SaveCSV import FL_SaveCSV
 from .nodes.captioning.FL_Video_Caption_Saver import FL_VideoCaptionSaver
 from .nodes.captioning.FL_WordFrequencyGraph import FL_WordFrequencyGraph
-
-# DISCORD NODES
-from .nodes.discord.FL_DiscordWebhook import FL_SendToDiscordWebhook
 
 # EXPERIMENTS NODES
 from .nodes.experiments.FL_BatchAligned import FL_BatchAlign
@@ -80,25 +45,6 @@ from .nodes.file_operations.FL_ZipSave import FL_ZipSave
 # GAMES NODES
 from .nodes.games.FL_BulletHellGame import FL_BulletHellGame
 from .nodes.games.FL_TetrisGame import FL_TetrisGame
-
-# GOOGLE_DRIVE NODES
-from .nodes.google_drive.FL_GoogleCloudStorage import FL_GoogleCloudStorage
-from .nodes.google_drive.FL_GoogleDriveDownloader import FL_GoogleDriveDownloader
-from .nodes.google_drive.FL_GoogleDriveImageDownloader import FL_GoogleDriveImageDownloader
-
-# GPT NODES
-from .nodes.gpt.FL_Dalle3 import FL_Dalle3
-from .nodes.gpt.FL_GPT_Image1 import FL_GPT_Image1
-from .nodes.gpt.FL_GPT_Image1_ADV import FL_GPT_Image1_ADV
-from .nodes.gpt.FL_GPT_Text import FL_GPT_Text
-from .nodes.gpt.FL_GPT_Vision import FL_GPT_Vision
-from .nodes.gpt.FL_SimpleGPTVision import FL_SimpleGPTVision
-
-# HUGGING_FACE NODES
-from .nodes.hugging_face.FL_HFDatasetDownloader import FL_HFDatasetDownloader
-from .nodes.hugging_face.FL_HFHubModelUploader import FL_HFHubModelUploader
-from .nodes.hugging_face.FL_HF_Character import FL_HF_Character
-from .nodes.hugging_face.FL_HF_UploaderAbsolute import FL_HF_UploaderAbsolute
 
 # KARTEL NODES
 from .nodes.kartel.FL_KartelJobInput import FL_KartelJobInput
@@ -244,8 +190,6 @@ NODE_CLASS_MAPPINGS = {
     "FL_ImageCaptionSaver": FL_ImageCaptionSaver,
     "FL_VideoCaptionSaver": FL_VideoCaptionSaver,
     "FL_ImageDimensionDisplay": FL_ImageDimensionDisplay,
-    "FL_GeminiVideoCaptioner": FL_GeminiVideoCaptioner,
-    "FL_GPT_Image1": FL_GPT_Image1,
     "FL_CodeNode": FL_CodeNode,
     "FL_ImagePixelator": FL_ImagePixelator,
     "FL_ImageAddToBatch": FL_ImageAddToBatch,
@@ -286,14 +230,9 @@ NODE_CLASS_MAPPINGS = {
     "FL_GradGenerator": FL_GradGenerator,
     "FL_MirrorAndAppendCaptions": FL_MirrorAndAppendCaptions,
     "FL_ImageCaptionLayout": FL_ImageCaptionLayout,
-    "FL_HFHubModelUploader": FL_HFHubModelUploader,
     "FL_ZipDirectory": FL_ZipDirectory,
     "FL_ZipSave": FL_ZipSave,
-    "FL_GPT_Vision": FL_GPT_Vision,
     "FL_TimeLine": FL_TimeLine,
-    "FL_SimpleGPTVision": FL_SimpleGPTVision,
-    "FL_SendToDiscordWebhook": FL_SendToDiscordWebhook,
-    "FL_HF_Character": FL_HF_Character,
     "FL_CaptionToCSV": FL_CaptionToCSV,
     "FL_KsamplerPlus": FL_KsamplerPlus,
     "FL_KsamplerPlusV2": FL_KsamplerPlusV2,
@@ -307,7 +246,6 @@ NODE_CLASS_MAPPINGS = {
     "FL_SamplerStrings": FL_SamplerStrings,
     "FL_SchedulerStrings": FL_SchedulerStrings,
     "FL_ImageCaptionLayoutPDF": FL_ImageCaptionLayoutPDF,
-    "FL_Dalle3": FL_Dalle3,
     "FL_SaveImages": FL_SaveImages,
     "FL_LoadImage": FL_LoadImage,
     "FL_PDFLoader": FL_PDFLoader,
@@ -321,7 +259,6 @@ NODE_CLASS_MAPPINGS = {
     "FL_TextToPDF": FL_TextToPDF,
     "FL_PDFEncryptor": FL_PDFEncryptor,
     "FL_SaveAndDisplayImage": FL_SaveAndDisplayImage,
-    "FL_OllamaCaptioner": FL_OllamaCaptioner,
     "FL_ImageAdjuster": FL_ImageAdjuster,
     "FL_CaptionSaver_V2": FL_CaptionSaver_V2,
     "FL_PathTypeChecker": FL_PathTypeChecker,
@@ -333,43 +270,26 @@ NODE_CLASS_MAPPINGS = {
     "FL_ImagePicker": FL_ImagePicker,
     "FL_ImageOverlay": FL_ImageOverlay,
     "FL_ImageAspectCropper": FL_ImageAspectCropper,
-    "FL_HF_UploaderAbsolute": FL_HF_UploaderAbsolute,
     "FL_ImageListToImageBatch": FL_ImageListToImageBatch,
     "FL_ImageBatchToImageList": FL_ImageBatchToImageList,
     "FL_ImageBatchToGrid": FL_ImageBatchToGrid,
     "FL_ApplyMask": FL_ApplyMask,
     "FL_ProResVideo": FL_ProResVideo,
     "FL_Padding": FL_Padding,
-    "FL_GoogleDriveDownloader": FL_GoogleDriveDownloader,
     "FL_NodeLoader": FL_NodeLoader,
     "FL_NodePackLoader": FL_NodePackLoader,
     "FL_API_Base64_ImageLoader": FL_API_Base64_ImageLoader,
     "FL_API_ImageSaver": FL_API_ImageSaver,
-    "FL_GoogleDriveImageDownloader": FL_GoogleDriveImageDownloader,
     "FL_AnimeLineExtractor": FL_AnimeLineExtractor,
     "FL_ClipScanner": FL_ClipScanner,
     "FL_VideoCut": FL_VideoCut,
     "FL_JS": FL_JS,
-    "FL_HFDatasetDownloader": FL_HFDatasetDownloader,
     "FL_WF_Agent": FL_WF_Agent,
     "FL_BlackFrameReject": FL_BlackFrameReject,
-    "FL_PixVerseAPI": FL_PixVerseAPI,
-    "FL_Fal_Pixverse": FL_Fal_Pixverse,
-    "FL_Fal_Kontext": FL_Fal_Kontext,
-    "FL_Fal_Gemini_ImageEdit": FL_Fal_Gemini_ImageEdit,
-    "FL_Fal_Seedance_i2v": FL_Fal_Seedance_i2v,
-    "FL_Fal_Seedream_Edit": FL_Fal_Seedream_Edit,
-    "FL_Fal_SeedVR_Upscale": FL_Fal_SeedVR_Upscale,
-    "FL_Fal_Pixverse_Transition": FL_Fal_Pixverse_Transition,
-    "FL_Fal_Pixverse_LipSync": FL_Fal_Pixverse_LipSync,
-    "FL_Fal_Kling_AIAvatar": FL_Fal_Kling_AIAvatar,
-    "FL_Fal_Sora": FL_Fal_Sora,
     "FL_PromptBasic": FL_PromptBasic,
     "FL_PromptMulti": FL_PromptMulti,
     "FL_PromptSelectorBasic": FL_PromptSelectorBasic,
     "FL_PaddingRemover": FL_PaddingRemover,
-    "FL_GPT_Text": FL_GPT_Text,
-    "FL_GoogleCloudStorage": FL_GoogleCloudStorage,
     "FL_StringToLoraName": FL_StringToLoraName,
     "FL_Switch": FL_Switch,
     "FL_Switch_Big": FL_Switch_Big,
@@ -386,11 +306,7 @@ NODE_CLASS_MAPPINGS = {
     "FL_WanVaceToVideoMultiRef": FL_WanVaceToVideoMultiRef,
     "FL_RIFE": FL_RIFE,
     "FL_FILM": FL_FILM,
-    "FL_GPT_Image1_ADV": FL_GPT_Image1_ADV,
     "FL_ImageBatch": FL_ImageBatch,
-    "FL_Hedra_API": FL_Hedra_API,
-    "FL_RunwayImageAPI": FL_RunwayImageAPI,
-    "FL_RunwayAct2": FL_RunwayAct2,
     "FL_ImageCrop": FL_ImageCrop,
     "FL_ImageToMask": FL_ImageToMask,
     "FL_WanFirstLastFrameToVideo": FL_WanFirstLastFrameToVideo,
@@ -412,7 +328,6 @@ NODE_CLASS_MAPPINGS = {
     "FL_Audio_Reactive_Scale": FL_Audio_Reactive_Scale,
     "FL_Audio_Reactive_Speed": FL_Audio_Reactive_Speed,
     "FL_Audio_Segment_Extractor": FL_Audio_Segment_Extractor,
-    "FL_Audio_Separation": FL_Audio_Separation,
     "FL_Audio_Shot_Iterator": FL_Audio_Shot_Iterator,
     "FL_AudioFrameCalculator": FL_AudioFrameCalculator,
     "FL_QwenImageEditStrength": FL_QwenImageEditStrength,
@@ -431,8 +346,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FL_ImageCaptionSaver": "FL Image Caption Saver",
     "FL_VideoCaptionSaver": "FL Video Caption Saver",
     "FL_ImageDimensionDisplay": "FL Image Size",
-    "FL_GeminiVideoCaptioner": "FL Gemini Video Captioner",
-    "FL_GPT_Image1": "FL GPT Image-1",
     "FL_CodeNode": "FL Code Node",
     "FL_ImagePixelator": "FL Image Pixelator",
     "FL_ImageAddToBatch": "FL Image Add To Batch",
@@ -474,14 +387,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FL_GradGenerator": "FL Grad Generator",
     "FL_MirrorAndAppendCaptions": "FL Mirror And Append Captions",
     "FL_ImageCaptionLayout": "FL Image Caption Layout",
-    "FL_HFHubModelUploader": "FL HFHub Model Uploader",
     "FL_ZipDirectory": "FL Zip Directory",
     "FL_ZipSave": "FL_ZipSave",
-    "FL_GPT_Vision": "FL GPT Captions",
     "FL_TimeLine": "FL Time Line",
-    "FL_SimpleGPTVision": "FL Simple GPT Vision",
-    "FL_SendToDiscordWebhook": "FL Kytra Discord Webhook",
-    "FL_HF_Character": "FL HF Character",
     "FL_CaptionToCSV": "FL Caption To CSV",
     "FL_KsamplerPlus": "FL KSampler Plus",
     "FL_KsamplerPlusV2": "FL KSampler Plus V2",
@@ -495,7 +403,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FL_SamplerStrings": "FL Sampler String XYZ",
     "FL_SchedulerStrings": "FL Scheduler String XYZ",
     "FL_ImageCaptionLayoutPDF": "FL Image Caption Layout PDF",
-    "FL_Dalle3": "FL Dalle 3",
     "FL_SaveImages": "FL Save Images",
     "FL_LoadImage": "FL Load Image",
     "FL_PDFLoader": "FL PDF Loader",
@@ -509,7 +416,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FL_TextToPDF": "FL Text To PDF",
     "FL_PDFEncryptor": "FL PDF Encryptor",
     "FL_SaveAndDisplayImage": "FL Save And Display Image",
-    "FL_OllamaCaptioner": "FL Ollama Captioner by Cosmic",
     "FL_ImageAdjuster": "FL Image Adjuster",
     "FL_CaptionSaver_V2": "FL Caption Saver V2",
     "FL_PathTypeChecker": "FL Path Type Checker",
@@ -521,43 +427,26 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FL_ImagePicker": "FL Image Picker",
     "FL_ImageOverlay": "FL Image Overlay",
     "FL_ImageAspectCropper": "FL Image Aspect Cropper",
-    "FL_HF_UploaderAbsolute": "FL HF Uploader Absolute",
     "FL_ImageListToImageBatch": "FL Image List To Image Batch",
     "FL_ImageBatchToImageList": "FL Image Batch To Image List",
     "FL_ImageBatchToGrid": "FL Image Batch To Grid",
     "FL_ApplyMask": "FL Apply Mask",
     "FL_ProResVideo": "FL ProRes Video",
     "FL_Padding": "FL Padding",
-    "FL_GoogleDriveDownloader": "FL Google Drive Downloader",
     "FL_NodeLoader": "FL Node Loader",
     "FL_NodePackLoader": "FL Node Pack Loader",
     "FL_API_Base64_ImageLoader": "FL API Base64 Image Loader",
     "FL_API_ImageSaver": "FL API Image Saver",
-    "FL_GoogleDriveImageDownloader": "FL Google Drive Image Downloader",
     "FL_AnimeLineExtractor": "FL Anime Line Extractor",
     "FL_ClipScanner": "FL Clip Scanner (Kytra)",
     "FL_VideoCut": "FL Video Cut Detector",
     "FL_JS": "FL JavaScript",
-    "FL_HFDatasetDownloader": "FL HF Dataset Downloader",
     "FL_WF_Agent": "FL Workflow Agent",
     "FL_BlackFrameReject": "FL Black Frame Reject",
-    "FL_PixVerseAPI": "FL PixVerse API",
-    "FL_Fal_Pixverse": "FL Fal Pixverse API",
-    "FL_Fal_Kontext": "FL Fal Kontext API",
-    "FL_Fal_Gemini_ImageEdit": "FL Fal Gemini Image Edit",
-    "FL_Fal_Seedance_i2v": "FL Fal Seedance i2v",
-    "FL_Fal_Seedream_Edit": "FL Fal Seedream Edit",
-    "FL_Fal_SeedVR_Upscale": "FL Fal SeedVR Upscale",
-    "FL_Fal_Pixverse_Transition": "FL Fal Pixverse Transition",
-    "FL_Fal_Pixverse_LipSync": "FL Fal Pixverse LipSync",
-    "FL_Fal_Kling_AIAvatar": "FL Fal Kling AI Avatar",
-    "FL_Fal_Sora": "FL Fal Sora 2",
     "FL_PromptBasic": "FL Prompt Basic",
     "FL_PromptMulti": "FL Prompt Multi",
     "FL_PromptSelectorBasic": "FL Prompt Selector Basic",
     "FL_PaddingRemover": "FL Padding Remover",
-    "FL_GPT_Text": "FL GPT Text",
-    "FL_GoogleCloudStorage": "FL Google Cloud Storage Uploader",
     "FL_StringToLoraName": "FL String To Lora Name",
     "FL_Switch": "FL Switch",
     "FL_Switch_Big": "FL Switch Big",
@@ -574,11 +463,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FL_VideoCadenceCompile": "FL Video Cadence Compile",
     "FL_FILM": "FL FILM Frame Interpolation",
     "FL_RIFE": "FL RIFE Frame Interpolation",
-    "FL_GPT_Image1_ADV": "FL GPT Image1 ADV",
     "FL_ImageBatch": "FL Image Batch",
-    "FL_Hedra_API": "FL Hedra API",
-    "FL_RunwayImageAPI": "FL Runway Image API",
-    "FL_RunwayAct2": "FL Runway Act2",
     "FL_TextOverlayNode": "FL Text Overlay",
     "FL_SaveWebM": "FL Save WebM",
     "FL_ImageCrop": "FL Image Crop",
@@ -602,7 +487,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FL_Audio_Reactive_Scale": "FL Audio Reactive Scale",
     "FL_Audio_Reactive_Speed": "FL Audio Reactive Speed",
     "FL_Audio_Segment_Extractor": "FL Audio Segment Extractor",
-    "FL_Audio_Separation": "FL Audio Separation",
     "FL_Audio_Shot_Iterator": "FL Audio Shot Iterator",
     "FL_AudioFrameCalculator": "FL Audio Frame Calculator",
     "FL_QwenImageEditStrength": "FL Qwen Image Edit with Strength",
@@ -614,24 +498,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "FL_KartelJobInput": "FL Kartel Job Input",
     "FL_KartelJobOutput": "FL Kartel Job Output",
 }
-
-# Conditionally register google-genai nodes if the SDK loaded successfully
-if _GENAI_NODES_AVAILABLE:
-    NODE_CLASS_MAPPINGS.update({
-        "FL_GeminiImageEditor": FL_GeminiImageEditor,
-        "FL_GeminiImageGenADV": FL_GeminiImageGenADV,
-        "FL_GeminiTextAPI": FL_GeminiTextAPI,
-        "FL_Veo3VideoGen": FL_Veo3VideoGen,
-        "FL_VertexGemini25FlashImage": FL_VertexGemini25FlashImage,
-    })
-    NODE_DISPLAY_NAME_MAPPINGS.update({
-        "FL_GeminiImageEditor": "FL Gemini Image Editor",
-        "FL_GeminiImageGenADV": "FL Gemini Image Gen ADV",
-        "FL_GeminiTextAPI": "FL Gemini Text API",
-        "FL_Veo3VideoGen": "FL Vertex Veo3",
-        "FL_VertexGemini25FlashImage": "FL Vertex Gemini 2.5 Flash Image",
-    })
-
 
 ascii_art = """
 
