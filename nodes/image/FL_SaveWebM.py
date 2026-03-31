@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 import imageio # For WebM creation
 import shutil
+import folder_paths
 
 class FL_SaveWebM:
     @classmethod
@@ -29,8 +30,7 @@ class FL_SaveWebM:
     CATEGORY = "🏵️Fill Nodes/Image"
 
     def save_webm_animation(self, images: torch.Tensor, directory: str, filename_prefix: str, fps: int, preserve_alpha: str, loop_count: int, quality: float, metadata_comment: str = ""):
-        if not os.path.exists(directory):
-            os.makedirs(directory, exist_ok=True)
+        directory = folder_paths.get_output_directory()
 
         # Determine unique filename
         i = 0
